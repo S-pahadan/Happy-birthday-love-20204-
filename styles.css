@@ -1,0 +1,171 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     border-radius: 10px ;
+}
+
+
+
+button:focus {
+    outline: none;
+}
+
+#birthdayHanger {
+    display: none;
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 33%;
+    animation: dropDown 2s forwards;
+}
+
+@keyframes dropDown {
+    to {
+        top: 20px;
+    }
+}
+
+#cake {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    animation: fadeIn 2s forwards;
+    z-index: 1; 
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#specialMessage {
+    display: none;
+    font-size: 24px;
+    color: #003366;
+    text-align: center;
+    z-index: 2; 
+
+}
+
+#specialMessage h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+#specialMessage p {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#bulb {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%) rotate(180deg);
+}
+
+.circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #FFD700; 
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.circle.blue {
+    background-color: #00BFFF; 
+}
+
+.circle.green {
+    background-color: #32CD32; 
+}
+
+.circle.pink {
+    background-color: #FFC0CB; 
+}
+
+.circle.purple {
+    background-color: #9370DB; 
+}
+
+.circle.orange {
+    background-color: #FFA500; 
+}
+
+.circle.red {
+    background-color: #FF6347; 
+}
+
+.circle.teal {
+    background-color: #008080; 
+}
+
+@media (max-width: 600px) {
+    #birthdayHanger {
+        width: 50%;
+        animation: dropDownMobile 2s forwards;
+    }
+
+    @keyframes dropDownMobile {
+        to {
+            top: 10px;
+        }
+    }
+
+    #cake {
+        width: 30%;
+    }
+
+    button {
+        width: 80px;
+        height: 70px;
+        font-size: 16px;
+    }
+
+    #specialMessage {
+        font-size: 20px;
+    }
+}
