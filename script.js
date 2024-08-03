@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         header.innerHTML = "<br><br><br><br><br><br><br><br><br><br><br><br><br>Happy Birthday<br>My Love"; 
     
         let paragraph = document.createElement('p');
-        paragraph.innerText = "My love Suha, This is Your day. Everynight, your voice echoes in my sleep. Where I yearn for your touch. I am sure not missing the next one"
+        paragraph.innerText = "My love Suha, This is Your day. Everynight, your voice echoes in my sleep. Where I yearn for your touch and I am sure of not missing this next year"
         specialMessage.appendChild(header);
         specialMessage.appendChild(paragraph);
     
